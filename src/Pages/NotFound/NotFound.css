@@ -1,0 +1,60 @@
+/* src/components/NotFound.css */
+
+.not-found-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: black;
+  padding: 20px;
+}
+
+.error-code {
+  font-size: 120px;
+  font-weight: bold;
+  margin: 0;
+  animation: bounce 1.5s infinite;
+}
+.error-image {
+  width: 400px; /* ya jitni required ho */
+  height: auto;
+  animation: bounce 1.5s infinite;
+}
+
+.error-message {
+  font-size: 32px;
+  margin-top: 20px;
+}
+
+.error-description {
+  font-size: 18px;
+  margin: 10px 0 30px;
+  max-width: 400px;
+}
+
+.back-home-btn {
+  background-color: #ff4444;
+  color: white;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.back-home-btn:hover {
+  background-color: #ff4444;
+  color: white;
+}
+
+/* Simple bounce animation */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}

@@ -1,0 +1,83 @@
+.custom-toast {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  min-width: 260px;
+  max-width: 90%;
+  padding: 16px 20px;
+  border-radius: 12px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 15.5px;
+  background: linear-gradient(135deg, #2c3e50, #4ca1af);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  animation: slideIn 0.5s ease, fadeOut 0.5s ease 3.5s forwards;
+  z-index: 9999;
+  opacity: 1;
+  backdrop-filter: blur(8px);
+  transition: transform 0.3s ease;
+}
+
+.success {
+  background: linear-gradient(135deg, #27ae60, #2ecc71);
+}
+
+.error {
+  background: linear-gradient(135deg, #c0392b, #e74c3c);
+}
+
+.toast-icon {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: popIn 0.4s ease;
+}
+
+.toast-text {
+  flex: 1;
+  line-height: 1.4;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(100%) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .custom-toast {
+    font-size: 14px;
+    padding: 12px 16px;
+    top: 20px;
+    right: 20px;
+    gap: 10px;
+  }
+}

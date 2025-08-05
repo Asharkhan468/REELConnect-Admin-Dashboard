@@ -1,0 +1,779 @@
+/* Base Styles */
+.course-container {
+  margin-left: 250px;
+  margin-top: 100px;
+  transition: margin 0.3s ease;
+}
+
+.table-container {
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+  overflow-x: auto;
+}
+
+.course-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "Poppins", sans-serif;
+  min-width: 600px;
+}
+
+.course-table thead {
+  background: #f9fafb;
+}
+
+.course-table th,
+.course-table td {
+  padding: 6px 8px;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.course-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.course-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.span-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.category,
+.duration {
+  font-size: 14px;
+  color: #4b5563;
+}
+
+.status {
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.status.active {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.status.draft {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.action-icons {
+  display: flex;
+  gap: 25px !important;
+
+}
+
+.action-icons svg {
+  color: #6b7280;
+  transition: color 0.2s ease;
+}
+
+.action-icons svg:hover {
+  color: #1f2937;
+}
+
+/* Pagination */
+.paginations {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.paginations span {
+  border: none;
+  font-size: 14px;
+
+  border-radius: 6px;
+  cursor: pointer;
+  color: #374151;
+}
+
+.paginations .active {
+  background-color: #dc2626;
+  color: white;
+}
+
+.paginations span:not(.active):hover {
+  background-color: #f3f4f6;
+}
+
+.page-btn {
+  background: #f3f4f6;
+
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  color: #374151;
+
+  border: none;
+  font-size: 14px;
+  margin: 0 4px;
+  padding: 6px 12px;
+}
+
+.page-btn:hover {
+  background: #e5e7eb;
+}
+
+/* Quiz Section Styles */
+.quiz-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.add-quiz-btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-quiz-btn:hover {
+  background-color: #45a049;
+}
+
+.quiz-form {
+  margin-top: 15px;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.question-card {
+  background-color: #f9f9f9;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border-left: 4px solid #4CAF50;
+}
+
+.question-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.remove-question {
+  background: none;
+  border: none;
+  color: #ff4444;
+  cursor: pointer;
+}
+
+.question-input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.options-container {
+  margin-left: 20px;
+}
+
+.option-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.option-input {
+  flex-grow: 1;
+  margin-left: 10px;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.add-question-btn {
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.add-question-btn:hover {
+  background-color: #0b7dda;
+}
+
+.no-questions {
+  color: #666;
+  font-style: italic;
+  text-align: center;
+  padding: 10px;
+}
+
+@media (max-width: 768px) {
+  .course-table {
+    border: 0;
+    min-width: 100%;
+  }
+
+  .course-table thead {
+    display: none;
+  }
+
+  .course-table tr {
+    display: block;
+    margin-bottom: 15px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 10px;
+  }
+
+  .course-table td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: right;
+    padding: 10px 5px;
+    border-bottom: 1px solid #f3f4f6;
+    font-size: 14px;
+  }
+
+  .course-table td:last-child {
+    border-bottom: none;
+  }
+
+  .course-table td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    text-align: left;
+    color: #6b7280;
+    flex: 1;
+    text-transform: capitalize;
+  }
+  .course-info {
+    display: flex;
+    flex-direction: column; /* 🔁 stack vertically */
+    align-items: center; /* 🟢 center horizontally */
+    text-align: center;
+    gap: 6px;
+  }
+
+  .course-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    object-fit: cover;
+    align-self: center;
+    margin-bottom: 8px;
+  }
+
+  .span-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1f2937;
+    line-height: 1.4;
+    word-break: break-word;
+  }
+
+  .action-icons {
+    justify-content: flex-end;
+  }
+}
+
+/* Add Course Button */
+.icon-footers {
+  position: fixed;
+  bottom: 60px;
+  right: 70px;
+  z-index: 1000;
+}
+
+.add-icons {
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.add-icons:hover {
+  transform: scale(1.1);
+}
+
+/* Modal Styles */
+.upload-container {
+  width: 80vw;
+  max-height: 80vh;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.xmark {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.xmark p {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.xmarks {
+  font-size: 24px;
+  color: #6b7280;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.xmarks:hover {
+  color: #1f2937;
+}
+
+/* Form Styles */
+.upload-file {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.upload-content,
+.upload-drag {
+  flex: 1;
+  min-width: 300px;
+}
+
+.upload-title,
+.upload-description,
+.drop,
+.upload-duration,
+.draging,
+.status {
+  margin-bottom: 20px;
+  margin-top: 15px;
+}
+
+
+.select {
+  padding-right: 25px; /* Add space for the arrow */
+  appearance: none; /* Remove default styling */
+  -webkit-appearance: none; /* For Safari */
+  -moz-appearance: none; /* For Firefox */
+  background-image: url('data:image/svg+xml;utf8,<svg fill="black" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-size: 16px;
+}
+
+.input-title {
+  box-sizing: border-box !important;
+}
+
+.textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: vertical; /* optional: allows user to resize vertically only */
+}
+
+.upload-title p,
+.description,
+.drop p,
+.upload-duration,
+.upload-drag,
+.draging p {
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 8px;
+}
+
+input[type="text"],
+textarea,
+select {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  transition: border-color 0.2s ease;
+  background-color: #f9fafb;
+}
+
+.upload-drag {
+  margin-left: 50px;
+}
+
+input[type="text"]:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #dc2626;
+  background-color: white;
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Drag and Drop Styles */
+.dragings {
+  width: 100%;
+  height: 150px;
+  border: 2px dashed #d1d5db;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background-color: #f9fafb;
+  position: relative;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.dragings.dragging-active {
+  border-color: #dc2626;
+  background-color: #fee2e2;
+}
+
+.drag {
+  color: #6b7280;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.thumbnail-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.thumbnail-preview {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Attachments List */
+.attachments-list {
+  margin-top: 15px;
+}
+
+.attachments-list p {
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.attachments-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.attachments-list li {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.attachments-list li:last-child {
+  border-bottom: none;
+}
+
+.remove-attachment {
+  background: none;
+  border: none;
+  color: #ef4444;
+  cursor: pointer;
+  font-size: 16px;
+  transition: color 0.2s ease;
+}
+
+.remove-attachment:hover {
+  color: #dc2626;
+}
+
+/* Radio Buttons */
+.upload-check {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.upload-check input[type="radio"] {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #d1d5db;
+  border-radius: 50%;
+  margin-right: 5px;
+  position: relative;
+  cursor: pointer;
+}
+
+.upload-check input[type="radio"]:checked {
+  border-color: #dc2626;
+}
+
+.upload-check input[type="radio"]:checked::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #dc2626;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.upload-check label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Buttons */
+.upload-btn {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.upload-btn button {
+  padding: 10px 24px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.upload-btn .cancel {
+  background-color: white;
+  border: 1px solid #d1d5db;
+  color: #374151;
+}
+
+.upload-btn .cancel:hover {
+  background-color: #f3f4f6;
+}
+
+.upload-btn .save {
+  background-color: #dc2626;
+  border: 1px solid #dc2626;
+  color: white;
+}
+
+.upload-btn .save:hover {
+  background-color: #b91c1c;
+}
+
+/* Error Messages */
+.error-message {
+  color: #ef4444 !important;
+  font-size: 14px;
+  margin-top: 5px;
+  display: block;
+}
+.edit-btn {
+  margin-top: 4px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1440px) {
+  .upload-container {
+    width: 80vw;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .course-container {
+    margin-left: 200px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .upload-file {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .upload-content,
+  .upload-drag {
+    width: 100%;
+  }
+  .upload-title,
+  .upload-description {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .course-container {
+    margin-left: 0;
+    padding-top: 70px;
+  }
+
+  .icon-footers {
+    right: 30px;
+    bottom: 20px;
+  }
+
+  .add-icons {
+    width: 50px;
+    height: 50px;
+  }
+
+  .upload-container {
+    width: 90vw;
+    padding: 15px;
+  }
+
+  .paginations {
+    justify-content: center;
+    padding-right: 0;
+  }
+  .upload-drag {
+    margin-left: 0px;
+  }
+
+  .upload-title,
+  .upload-description {
+    width: 100%;
+  }
+
+  .upload-title p,
+  .description,
+  .drop p,
+  .upload-duration,
+  .upload-drag,
+  .draging p {
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 8px;
+    font-size: small;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .upload-container {
+    width: 95vw;
+  }
+
+  .upload-btn {
+    flex-direction: column;
+  }
+
+  .upload-btn button {
+    width: 100%;
+  }
+
+  .xmark p {
+    font-size: 18px;
+  }
+
+  .xmarks {
+    font-size: 20px;
+  }
+
+  .drag {
+    font-size: 14px;
+    padding: 0 10px;
+  }
+
+  .upload-check {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+  }
+  .upload-drag {
+    margin-left: 0px;
+  }
+
+  .upload-title p,
+  .description,
+  .drop p,
+  .upload-duration,
+  .upload-drag,
+  .draging p {
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 8px;
+    font-size: small;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .course-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .action-icons {
+    gap: 10px;
+    
+  }
+
+  .icon-footers {
+    right: 20px;
+    bottom: 15px;
+  }
+
+  .add-icons {
+    width: 45px;
+    height: 45px;
+  }
+  .upload-drag {
+    margin-left: 0px;
+  }
+
+  .upload-title p,
+  .description,
+  .drop p,
+  .upload-duration,
+  .upload-drag,
+  .draging p {
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 8px;
+    font-size: small;
+  }
+}
